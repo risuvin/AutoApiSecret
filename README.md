@@ -158,7 +158,7 @@ Shell
 
   ![image](https://user-images.githubusercontent.com/38358681/133707061-0a3ba554-0981-4251-9be0-4d41cbb46f47.png)
 
-  * 每次轮数修改地方：（在1.py最后面）
+  * 每次轮数修改地方：（在run.py最后面）
 
   ![image](https://user-images.githubusercontent.com/38358681/133707124-caa308b6-380c-4074-9348-b84a83d9d709.png)
 
