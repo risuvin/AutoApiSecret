@@ -33,16 +33,16 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 
    *** **有错误/问题请看**:    
 
-* 第一步，[portal.zaure.com](portal.zaure.com/#home)，了解如何获取应用id、机密、refresh_token 3样东西，以方便接下来的操作。
+* 第一步，若尚未获取应用id、机密、refresh_token 3样东西，請先前往 **前置准备** 了解，以方便接下来的操作。
 
 * 第二步，登陆/新建github账号，回到本项目页面，点击右上角fork本项目的代码到你自己的账号，然后你账号下会出现一个一模一样的项目，接下来的操作均在你的这个项目下进行。（看不到图片/图裂请科学上网）
 
   ![image](https://user-images.githubusercontent.com/38358681/133702634-de33fef2-8324-418e-a939-eb3e9b6d6adf.png)
 
 
-  然后在线编辑你项目里的1.txt，将整个refresh_token覆盖粘贴进去（里面是我的数据，先删掉或者覆盖掉）。（千万不要改1.py）
+  然后在线编辑你项目里的config.txt，将整个refresh_token覆盖粘贴进去（里面是我的数据，先删掉或者覆盖掉）。（千万不要改run.py）
 
-    > refresh_token位置如图下。复制refresh_token紧接着的双引号里的内容（红竖线框起来的），不要把双引号复制进去。复制进1.txt后，留意结尾不要留空格或者空行
+    > refresh_token位置如图下。复制refresh_token紧接着的双引号里的内容（红竖线框起来的），不要把双引号复制进去。复制进config.txt后，留意结尾不要留空格或者空行
 
     ![image](https://user-images.githubusercontent.com/38358681/133702570-3162f730-6461-4571-8a3a-1d6557a9d49d.png)
 
@@ -80,9 +80,9 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 
 定时自动启动修改地方：（在.github/workflow/AutoApiSecret.yml文件里，自行百度cron定时任务格式，最短每5分钟一次）
 
-* [portal.zaure.com](portal.zaure.com/#home)
+------------------------------------------------------------
 
-准备
+### 前置准备 ###
 
 在上面操作中，“获取 api key” 第4步“重定向 URI (可选)”处，重定向url选web，填入 http://localhost:53682/ ，完成获取 api key 。
 
