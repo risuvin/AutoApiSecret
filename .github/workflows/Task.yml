@@ -36,15 +36,15 @@ jobs:
         cp run.py copyed_run.py
         echo $CONFIG_ID > configid.txt
         echo $CONFIG_KEY > configkey.txt
-        sed -i '10 r configid.txt' copyed_run
-        sed -i '12 r configkey.txt' copyed_run
+        sed -i '10 r configid.txt' copyed_run.py
+        sed -i '12 r configkey.txt' copyed_run.py
     - name: Test Api #Api调用
       run: | 
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
-        python copyed_run
+        python copyed_run.py
     - name: Delete secrets config #删除机密
       run: | 
-        rm -f copyed_run
+        rm -f copyed_run.py
         rm -f configid.txt
         rm -f configkey.txt    
     - name: Commit #上传新的refresh_token到仓库
