@@ -33,18 +33,18 @@ jobs:
         CONFIG_ID: ${{ secrets.CONFIG_ID }} # secrets_id 提供
         CONFIG_KEY: ${{ secrets.CONFIG_KEY }} # secrets_key 提供
       run: | 
-        cp 1.py 2.py
+        cp run.py copyed_run.py
         echo $CONFIG_ID > configid.txt
         echo $CONFIG_KEY > configkey.txt
-        sed -i '10 r configid.txt' 2.py
-        sed -i '12 r configkey.txt' 2.py
+        sed -i '10 r configid.txt' copyed_run
+        sed -i '12 r configkey.txt' copyed_run
     - name: Test Api #Api调用
       run: | 
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
-        python 2.py
+        python copyed_run
     - name: Delete secrets config #删除机密
       run: | 
-        rm -f 2.py
+        rm -f copyed_run
         rm -f configid.txt
         rm -f configkey.txt    
     - name: Commit #上传新的refresh_token到仓库
